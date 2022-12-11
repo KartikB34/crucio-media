@@ -30,10 +30,11 @@ app.use("/api/v1",user)
 //     res.sendFile(path.join(__dirname, "./frontend/build/index.html"))
 // })
 // const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/fronend/build")));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+console.log(__dirname)
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/frontend/build/index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
 
